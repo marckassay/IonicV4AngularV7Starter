@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ItemService } from '../item.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Item } from '../item';
 import { switchMap } from 'rxjs/operators';
 
@@ -12,7 +12,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class ItemListPage implements OnInit {
   items$: Observable<Item[]>;
-  selectedId: any;
+  selectedId: number;
 
   constructor(
     private service: ItemService,
@@ -21,11 +21,16 @@ export class ItemListPage implements OnInit {
 
   ngOnInit() {
     this.items$ = this.route.paramMap.pipe(
-      switchMap(params => {
-        // (+) before `params.get()` turns the string into a number
-        // this.selectedId = +params.get('id');
+      switchMap((params: Params) => {
+        this.selectedId = (params.get('id') !== null) ? +params.get('id') : 1;
         return this.service.getItems();
       })
     );
   }
 }
+
+/*
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

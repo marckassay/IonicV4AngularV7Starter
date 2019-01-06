@@ -8,10 +8,10 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<!-- [class.selected]="item.id === selectedId" -->
+
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items$  | async">
+  <ion-list class="items">
+    <ion-item *ngFor="let item of items$ | async" [routerLink]="['/item', item.id]" [class.selected]="item.id === selectedId">
       <ion-icon [name]="item.icon" slot="start"></ion-icon>
       {{item.title}}
       <div class="item-note" slot="end">
@@ -20,3 +20,8 @@
     </ion-item>
   </ion-list>
 </ion-content>
+<!-- 
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

@@ -27,11 +27,18 @@ export class ItemDetailComponent implements OnInit {
         );
     }
 
-    gotoItemes(item: Item) {
-        const itemId = item ? item.id : null;
-        // Pass along the item id if available
-        // so that the ItemList component can select that item.
-        // Include a junk 'foo' property for fun.
-        this.router.navigate(['/list', { id: itemId, foo: 'foo' }]);
+    gotoList(item) {
+        this.router.navigate(['/superitems', { id: item.id }]);
+
+        // foo is demonstrating that any arbitrary data can be add to query object.
+        // this.router.navigate(['/superitems', { id: item.id, foo: 'foo' }]);
+
+        // this.router.navigate(['/superitems', item.id]);
     }
 }
+
+/*
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/
