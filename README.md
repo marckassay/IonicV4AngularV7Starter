@@ -1,12 +1,31 @@
-# IonicV4AngularV7Starter
+# MK.PowerShell.IO
 
-This is a working starter for Ionic's sidemenu with Angular. At the moment of development, Ionic CLI creates a starter without demostrating the usages of Angular's Router. That issue has been documented [here](https://github.com/ionic-team/starters/issues/603). 
+Contain commands to be performed on filesystem items or in-memory procedures (utils).
 
-This Ionic starter is developed following closly to Angular's example that is posted in this [article](https://angular.io/guide/router#the-sample-application) and combining it with Ionic's sidemenu starter. 
+This module exports the following scripts:
 
-## Install
+* PrependLicense
+    Add-GPLHeader
+    Add-MITHeader
+    Add-Header
+    Get-FileTypeTable
+    Get-BracketTable
+    Set-FileTypeTable
+    Set-BracketTable
 
-Clone and then build as usaual:
-```shell
-git clone https://github.com/marckassay/IonicV4AngularV7Starter.git
-```
+* SeeDatum
+    Get-Bytes
+    ConvertTo-Binary
+    ConvertTo-UTF8
+    ConvertTo-Character
+
+* EndOfLine
+    ConvertTo-LF
+    ConvertTo-CRLF
+
+* KidRSA
+    Get-RSAKey
+    ConvertTo-CipherText
+    ConvertTo-PlainText
+    ConvertTo-PublicEncryptionValue
+    ConvertTo-PrivateDecryptionValue
