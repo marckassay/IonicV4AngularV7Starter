@@ -10,15 +10,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "add-spies": "node ./node_modules/spypkg/dist/index.js --verbose",
-    "remove-spies": "node ./node_modules/spypkg/dist/index.js --remove --verbose"
-  },
-  "spypkg": {
-    "spies": [
-      "ionic"
-    ],
-    "location": "C:\\Users\\marck\\AppData\\Roaming\\.spies"
+    "e2e": "ng e2e"
   },
   "dependencies": {
     "@angular/common": "~7.1.4",
@@ -57,8 +49,6 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~10.12.0",
     "codelyzer": "~4.5.0",
-    "cordova": "8.1.1",
-    "ionic": "^4.6.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.4",
@@ -67,7 +57,6 @@
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
-    "spypkg": "^2.0.2",
     "ts-node": "~7.0.0",
     "tslint": "~5.12.0",
     "typescript": "~3.1.6"
